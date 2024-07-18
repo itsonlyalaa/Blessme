@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatiable" content="IE=edge">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="shortcut icon" type="x-icon" href="Images/logo.png">
+	<title>Blessme | Login page</title>
+	<link rel="stylesheet" href="Templates/Signup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+<!------------------------------------page header------------------------------------->
+	<header>
+		<input type="checkbox" name="" id="toggler">
+		<label for="toggler" class="fas fa-bars"></label>
+		<img src="Images/logo.png" class="logo">
+
+			<nav class="navbar">
+				<a href="index.html#home">home</a>
+				<a href="index.html#about">about</a>
+				<a href="index.html#products">products</a>
+				<a href="index.html#contact">contact</a>
+			</nav>
+
+			<div class="icons">
+				<a href="#" class="fas fa-heart"></a>
+				<a href="shoppingcart.html" class="fas fa-shopping-cart"></a>
+				<a href="Signup.html" class="fas fa-user"></a>
+			</div>
+	</header>
+<!-----------------------------------------form slide button------------------------------>
+	<div class="container">
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login">Login</button>
+			<button class="signup">Signup</button>
+		</div>
+<!-----------------------------------------login form---------------------------------------->
+		<div class="form-box">
+			<div class="login-box">
+				<input type="email" class="elements" placeholder="Email" required>
+				<input type="password" class="elements" placeholder="password" required>
+				<button class="clkbtn">Login</button>
+			</div>
+<!------------------------------------------signup form-------------------------------------->
+			<div class="signup-box">
+				<input type="text" class="elements" placeholder="Enter your name" required>
+				<input type="email" class="elements" placeholder="youremail@email.com" required>
+				<input type="password" class="elements" placeholder="password" required>
+				<input type="password" class="elements" placeholder=" Confirm password" required>
+				<button class="clkbtn">Signup</button>
+			</div>
+		</div>
+	</div>
+<!------------------------------------added javascript for user interaction------------------------>
+	<script src="signup.js"></script>
+</body>
+</html>
