@@ -1,0 +1,226 @@
+/*style for all types of elements in html*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', serif;
+	outline: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+
+/*html page style*/
+html {
+	font-size: 1.25rem;
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+	overflow-x: hidden;
+}
+
+/*body style*/
+body {
+	background: url(../Images/BG2.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/*page header style*/
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo {
+	width: 8rem;
+	height: auto;
+}
+
+header .navbar a {
+	font-size: 1rem;
+	padding: 0 1.5rem;
+	color: black;
+}
+
+header .navbar a:hover {
+	color: #D4B2A7;
+}
+
+header .icons a {
+	font-size: 1rem;
+	color: black;
+	margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+	color: #D4B2A7;
+}
+
+header #toggler {
+	display: none;
+}
+
+header .fa-bars {
+	font-size: 1rem;
+	color: black;
+	border-radius: .5rem;
+	padding: .5rem 1.5rem;
+	cursor: pointer;
+	border: .1rem solid rgba(0,0,0,.3);
+	display: none;
+}
+
+/*page heading style*/
+h2 {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 10rem;
+	color: rgb(19, 75, 103);
+}
+
+/*page heading hover*/
+h2:hover {
+	color: #D4B2A7;
+}
+
+/*image and text container styles*/
+.box-container {
+	margin-top: 2rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.box {
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.box-container .box {
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+	border-radius: 1rem;
+	border: .1rem solid rgba(0,0,0,.1);
+	position: relative;
+	max-width: 50%;
+	max-height: 50%;
+	float: left;
+	align-items: center;
+}
+
+.box-container .box .image {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.box-container .box .image img {
+	height: 15rem;
+}
+
+.box-container .box:hover .image img {
+	transform: scale(1.1);
+}
+
+.box-container .box .image .icons {
+	position: relative;
+	bottom: -7rem;
+	left: 0;
+	right: 0;
+	display: flex;
+}
+
+.box-container .box:hover .image .icons {
+	bottom: 0;
+}
+
+.box-container .box .image .icons a {
+	height: 2rem;
+	line-height: 1rem;
+	font-size: 1rem;
+	width: 50%;
+	background: white;
+	color: black;
+}
+
+.box-container .box .image .icons .cart-btn {
+	border-left: .1rem solid lightblue;
+	border-right: .1rem solid lightblue;
+	width: 100%;
+}
+
+.box-container .box .image .icons a:hover {
+	background: #D4B2A7;
+}
+
+.box-container .box .content {
+	/*padding: 1rem;*/
+	text-align: center;
+}
+
+.box-container .box .content h3 {
+	font-size: 1rem;
+	color: rgb(19, 75, 103);
+}
+
+.box-container .box .content .price {
+	font-size: 1rem;
+	color: rgb(34, 134, 184);
+	font-weight: bold;
+}
+
+/*page responsiveness with mobile view*/
+@media (max-width: 1000px) {
+
+	html {
+	font-size: 15px;
+	}
+
+	header {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 750px) {
+
+	header .fa-bars {
+		display: block;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: white;
+		border-top: .1rem solid rgba(0,0,0,.1);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+
+	header #toggler:checked ~ .navbar {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+
+	header .navbar a {
+		margin: 1.5rem;
+		padding: 1.5rem;
+		background: white;
+		border: .1rem solid rgba(0,0,0,.1);
+		display: block;
+	}
+}
+
+@media (max-width: 450px) {
+
+	html {
+	font-size: 10px;
+	}
+}
